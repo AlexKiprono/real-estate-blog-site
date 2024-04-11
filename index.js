@@ -161,7 +161,7 @@ function editProperty(id) {
   .catch(error => console.error('Error fetching property for editing:', error));
 }
 
-//update
+//update post
 function update_post(id) {
   const imageValue = document.querySelector('#image_update').value;
   const listNameValue = document.querySelector('#update_listName').value;
@@ -181,7 +181,7 @@ function update_post(id) {
       listDescription: listDescriptionValue,
       listTimeLine: listTimeLineValue,
       price: priceValue,
-      ratings: ratings // Include the selected rating value in the request payload
+      ratings: ratings
     })
   })
   .then(() => {
@@ -192,7 +192,7 @@ function update_post(id) {
 
 // Function to delete property
 function deleteProperty(id) {
-  // Confirm with the user before deletion
+  // Confirm before deletion
   if (confirm("Are you sure you want to delete this property?")) {
     fetch(`http://localhost:5000/properties/${id}`, {
       method: "DELETE"
