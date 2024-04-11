@@ -1,5 +1,5 @@
 # REAL ESTATE BLOG SITE
-#### The app is a simple Blog project, 11/10/2023
+#### The app is a simple Blog project, 11/04/2024
 #### **By ALEX KIPRONO**
 ## Project Description
     Its a simple Real Estate Blog App
@@ -17,7 +17,7 @@ Deployed Backend can be accessed here [Blog](https://real-estate-blog-site.onren
 
 
 ## Known Bugs
-    The modal to view All Property details doesn't display the content
+    on updating the content with images, some images do not resolve on the UI
 
 ## Technologies used
     - JS

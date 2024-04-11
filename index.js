@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const listDescriptionValue = document.querySelector('#listDescription').value;
     const listTimeLineValue = document.querySelector('#listTimeLine').value;
     const priceValue = document.querySelector('#listPrice').value;
-    const ratings = document.querySelector('input[name="rating"]:checked').value; // Get the value of the selected radio button
+    
+    // Get the value of the selected radio button for ratings
+    const ratings = document.querySelector('input[name="rating"]:checked').value; 
 
     // Fetch existing properties to determine the maximum ID
     fetch('https://real-estate-blog-site.onrender.com/properties')
@@ -192,7 +194,7 @@ function update_post(id) {
 
 // Function to delete property
 function deleteProperty(id) {
-  // Confirm before deletion
+  // Confirm before deleting the property details
   if (confirm("Are you sure you want to delete this property?")) {
     fetch(`https://real-estate-blog-site.onrender.com/properties/${id}`, {
       method: "DELETE"
