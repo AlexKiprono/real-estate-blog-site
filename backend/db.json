@@ -1,0 +1,31 @@
+{
+  "properties": [
+    {
+      "id": "1",
+      "image": "./images/pic2.jpg",
+      "listName": "Austin Martin",
+      "listDescription": "The Audi A6 you and I know is slightly",
+      "listTimeLine": 2017,
+      "price": 17890,
+      "likesCount": 5
+    },
+    {
+      "id": "3",
+      "image": "./images/pic3.jpg",
+      "listName": "Bungalow in Chepseon index updated",
+      "listDescription": "cool times to be here",
+      "listTimeLine": "weekend",
+      "price": "900",
+      "likesCount": 2
+    },
+    {
+      "id": "4",
+      "image": "./images/pic4.jpg",
+      "listName": "Turkana East, Kakuma updated",
+      "listDescription": "cool area",
+      "listTimeLine": "weekend",
+      "price": "500",
+      "likesCount": 7
+    }
+  ]
+}
