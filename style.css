@@ -32,6 +32,35 @@
     color: rgb(231, 49, 12);
 }
 
+.star-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 0.1em;
+    cursor: pointer;
+}
+.star-rating label:before {
+    content: '\2605';
+    display: block;
+}
+.star-rating input:checked ~ label:before {
+    content: '\2605';
+    color: gold;
+}
+.star-rating label:hover:before,
+.star-rating label:hover ~ label:before {
+    content: '\2605';
+    color: gold;
+}
+
+
 @media (max-width: 992px) {
     .card {
         flex: 0 0 calc(50% - 20px);

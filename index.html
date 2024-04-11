@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -9,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>ESTATE BLOG</title>
+    <title>REAL ESTATE</title>
   </head>
   <body>
 
@@ -17,7 +16,7 @@
 
     <nav class="navbar navbar-expand-xxl navbar-dark bg-dark  mt-1 mx-3  ">
             <div class="container-fluid ">
-                    <a class="navbar-brand" href="#">ALEX CAR BLOGS</a>
+                    <a class="navbar-brand m-4" href="/">REAL ESTATE LISTINGS</a>
     
                     <button type="button" class="btn btn-primary mt-2 mx-5" data-bs-toggle="modal" data-bs-target="#addProperty">Add Property + </button>
             </div>
@@ -25,8 +24,8 @@
 
     <main class="shadow mx-5">
         <div class="col-md-12 d-flex justify-content-center align-items-center">
-            <div class="align-middle blog">
-                <h1 class="font-weight-bold text-5xl lh-1" style="font-size: 120px;">REAL ESTATE <span class="text-uppercase text-centre" style="font: size 120px;">Blog</span> </h1>
+            <div class="align-middle blog justify-content-center">
+                <h1 class="font-weight-bold text-5xl lh-1" style="font-size: 80px;">REAL ESTATE <span class="text-uppercase text-centre" style="font: size 120px;">listings</span> </h1>
                 <p class="font-weight-semibold text-xl">Live . Love . Laugh</p>
             </div> 
         </div>
@@ -96,10 +95,10 @@
             <div class="modal-body" >
 
                 <form class="addPostForm" id="addPostForm" method="post" enctype="multipart/form-data">
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Upload Image</label>
-                        
-                        <input type="file" class="form-control" id="image" value="./images/pic2.jpg" accept="images/*">
+
+                    <div class="mb-3">
+                        <label for="listName" class="form-label">Image</label>
+                        <input type="url" class="form-control" id="image" placeholder="image">
                     </div>
                 
                     <div class="mb-3">
@@ -123,14 +122,27 @@
                         <input type="number" class="form-control" id="listPrice" value="3000" placeholder="Price">
                         <!-- Placeholder text updated for clarity -->
                     </div>
+
+                    <div class="mb-3">
+                        <label for="ratings" class="form-label">Ratings</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="⭐⭐⭐⭐⭐"><label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="⭐⭐⭐⭐✩"><label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="⭐⭐⭐✩✩"><label for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="⭐⭐✩✩✩"><label for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="⭐✩✩✩✩"><label for="star1"></label>
+                        </div>
+                    </div>
+                    
+
+                    <br>
+
                 
                     <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                 </form>
                 
 
             </div>
-
-            
 
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -197,32 +209,6 @@
         </div>
     </div>
 
-    <!--View All Modal-->
-    <div class="modal fade modal-dialog modal-lg" id="viewAllDetails" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewAllDetailsLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="viewAllDetailsLabel">view Details</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <!--EDit form-->
-            <div class="modal-body viewAllDetails" id="viewAllDetails" >
-
-
-                
-
-            </div>
-
-            
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-            </div>
-        </div>
-        </div>
-    </div>
 
 
   <!-- Blog posts -->
@@ -235,101 +221,7 @@
     </div>
 </div>
 
-
-<a href=""></a>
-
-
-
-
-    <!-- modal -->
-    <!-- xl screen modal -->
-    <div class="modal fade" id="viewCar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewCarLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="viewCarLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="image">
-                    <img src="./images/car2.jpg" class="card-img-top" alt="Car Name">
-                </div>
-                <hr>
-            
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="content row">
-                        <div class="col-md-6 p-2 d-flex justify-content-center align-items-center">
-                            <table class="table table-striped mx-3">
-                                <tr>
-                                    <th scope="row">Car Make</th>
-                                    <td>Toyota</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Model</th>
-                                    <td>Camry</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Year of Manufacture</th>
-                                    <td>2017</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Price</th>
-                                    <td>$170,000</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Engine Capacity</th>
-                                    <td>5200 cc</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Fuel Type</th>
-                                    <td>Gas</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Drive Type</th>
-                                    <td>4WD</td>
-                                </tr>
-                            </table>
-                        </div>
-            
-                        <div class="col-md-6 d-flex justify-content-center align-items-center">
-                            <div class="align-middle">
-                                <h1 class="lh-1">Description</h1>
-                                <p class="text-sm">Back in November, Alfa Romeo teased another look at a new supercar. Expected to be called the 8C, the mid-engine coupe had yet to get the green light from Stellantis. Jean-Philippe Imparato, Alfa-Romeo's CEO, promised more to come on the car, with an official announcement planned for March 2023. This week, just days before that March timeline, we learned that Alfa Romeo had already taken deposits, despite no decision from Stellantis or an official reveal. In an interview with Autocar, Imparato acknowledged the tentative status of the supercar, saying, “To make this type of decision in 2022 in a group like Stellantis, everyone considers that you are completely mad.”</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="card mx-3" style="width: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title"><em>Comments and Reviews</em></h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            
-                <br>
-            
-                <div class="mb-3">
-                    <label for="comments" class="form-label">What are your views on this post?</label>
-                    <textarea class="form-control" placeholder="Leave a comment here" id="comments"></textarea>
-                </div>
-            </div>
-            
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="" class="btn btn-primary"></button>
-            </div>
-          </div>
-        </div>
-    </div>
-    <!-- modal -->
-
-
-
     <hr>
-
 
    <!--Footer-->
 
@@ -362,7 +254,6 @@
 
 
 </main>
-    <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
