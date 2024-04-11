@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   // Fetch properties and render them
-  fetch("http://localhost:5000/properties")
+  fetch("https://real-estate-blog-site.onrender.com/properties")
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const ratings = document.querySelector('input[name="rating"]:checked').value; // Get the value of the selected radio button
 
     // Fetch existing properties to determine the maximum ID
-    fetch('http://localhost:5000/properties')
+    fetch('https://real-estate-blog-site.onrender.com/properties')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch properties');
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
               
 
         // POST the new property with the incremented ID
-        return fetch('http://localhost:5000/properties', {
+        return fetch('https://real-estate-blog-site.onrender.com/properties', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //EDIT data in the json-server
 function editProperty(id) {
-  fetch(`http://localhost:5000/properties/${id}`)
+  fetch(`https://real-estate-blog-site.onrender.com/properties/${id}`)
   .then((response) => response.json())
   .then((post) => {
     const editProperty = document.querySelector("#editPropertyForm");
@@ -170,7 +170,7 @@ function update_post(id) {
   const priceValue = document.querySelector('#update_listPrice').value;
   const ratings = document.querySelector('input[name="edit-rating"]:checked').value;
 
-  fetch(`http://localhost:5000/properties/${id}`, {
+  fetch(`https://real-estate-blog-site.onrender.com/properties/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
@@ -194,7 +194,7 @@ function update_post(id) {
 function deleteProperty(id) {
   // Confirm before deletion
   if (confirm("Are you sure you want to delete this property?")) {
-    fetch(`http://localhost:5000/properties/${id}`, {
+    fetch(`https://real-estate-blog-site.onrender.com/properties/${id}`, {
       method: "DELETE"
     })
     .then(response => {

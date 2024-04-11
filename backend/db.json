@@ -44,6 +44,15 @@
       "listTimeLine": "one night",
       "price": "3000",
       "ratings": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "id": 6,
+      "image": "https://media.istockphoto.com/id/1436217023/photo/exterior-of-a-blue-suburban-home.jpg?s=612x612&w=0&k=20&c=6n08rcEdza9Vehf5cHzk1uS0UKAN0qr3o884mbDvD5o=",
+      "listName": "Nairobi Game, Nairobi County",
+      "listDescription": "lorem, ipsum cools stuff",
+      "listTimeLine": "",
+      "price": "3000",
+      "ratings": "⭐⭐✩✩✩"
     }
   ]
 }
